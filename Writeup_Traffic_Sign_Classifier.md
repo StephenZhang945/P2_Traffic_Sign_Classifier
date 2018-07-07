@@ -128,16 +128,21 @@ If a well known architecture was chosen:
 
 Here are five German traffic signs that I found on the web:
 
-speed limit(30km/h)
-![speed limit(30km/h)](https://github.com/StephenZhang945/P2_Traffic_Sign_Classifier/blob/master/New_Image/0.png) 
-go straight or left
-![go straight or left](https://github.com/StephenZhang945/P2_Traffic_Sign_Classifier/blob/master/New_Image/1.png)
-ahead only
-![ahead only](https://github.com/StephenZhang945/P2_Traffic_Sign_Classifier/blob/master/New_Image/2.png)
-no vehicles
-![no vehicles](https://github.com/StephenZhang945/P2_Traffic_Sign_Classifier/blob/master/New_Image/3.png)
-right-of-way at the next intersection
-![right-of-way at the next intersection](https://github.com/StephenZhang945/P2_Traffic_Sign_Classifier/blob/master/New_Image/4.png)
+
+![speed limit(30km/h)](https://github.com/StephenZhang945/P2_Traffic_Sign_Classifier/blob/master/New_Image/0.png) speed 
+limit(30km/h)
+
+
+![go straight or left](https://github.com/StephenZhang945/P2_Traffic_Sign_Classifier/blob/master/New_Image/1.png)go straight or left
+
+
+![ahead only](https://github.com/StephenZhang945/P2_Traffic_Sign_Classifier/blob/master/New_Image/2.png)ahead only
+
+
+![no vehicles](https://github.com/StephenZhang945/P2_Traffic_Sign_Classifier/blob/master/New_Image/3.png)no vehicles
+
+
+![right-of-way at the next intersection](https://github.com/StephenZhang945/P2_Traffic_Sign_Classifier/blob/master/New_Image/4.png)right-of-way at the next intersection
 
 The first image might be difficult to classify because ...
 
