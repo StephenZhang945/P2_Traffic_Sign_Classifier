@@ -17,7 +17,7 @@ The goals / steps of this project are the following:
 * Summarize the results with a written report
 
 
-[//]: # (Image References)
+[//]: # (https://github.com/StephenZhang945/P2_Traffic_Sign_Classifier/blob/master/New_Image/0.png)
 
 [image1]: ./examples/visualization.jpg "Visualization"
 [image2]: ./examples/grayscale.jpg "Grayscaling"
@@ -87,10 +87,10 @@ My final model consisted of the following layers:
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x1 RGB image   							| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
+| Convolution 3x3     	| 1x1 stride, VALID padding, outputs 32x32x64 	|
 | RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
+| Max pooling	      	| 2x2 stride,  outputs 14x14x16 				|
+| Convolution 3x3	    | 1x1 stride, VALID paddding, outputs 10x10x16 	|
 | Fully connected		| etc.        									|
 | Softmax				| etc.        									|
 |						|												|
