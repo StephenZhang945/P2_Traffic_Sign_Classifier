@@ -45,7 +45,7 @@ You're reading it! and here is a link to my [project code](https://github.com/St
 I used the pandas library to calculate summary statistics of the traffic
 signs data set:
 
-* The size of training set is 43139
+* The size of training set is 34799
 * The size of the validation set is 4410
 * The size of test set is 12630
 * The shape of a traffic sign image is (32, 32, 3)
@@ -53,7 +53,7 @@ signs data set:
 
 #### 2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Here is an exploratory visualization of the data set. It is a bar chart showing how the data distributed.
 
 ![alt text][image1]()
 
@@ -67,17 +67,17 @@ Here is an example of a traffic sign image before and after grayscaling.
 
 ![alt text][image2]
 
-As a last step, I normalized the image data because ...
+As a last step, I normalized the image data because normalize process change the image value 0~255 to -1~1 is more easy to apply logistics regression.
 
-I decided to generate additional data because ... 
+I decided to generate additional data because more train data is helped to inhance performance of classification model.
 
-To add more data to the the data set, I used the following techniques because ... 
+To add more data to the the data set, I used the following techniques because image translation, rotation and resize could help to avoid overfitting.
 
 Here is an example of an original image and an augmented image:
 
 ![alt text][image3]
 
-The difference between the original data set and the augmented data set is the following ... 
+The difference between the original data set and the augmented data set is that augmented data set is switch from original data by translation, rotation and resize.
 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
@@ -86,7 +86,7 @@ My final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x3 RGB image   							| 
+| Input         		| 32x32x1 RGB image   							| 
 | Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
 | RELU					|												|
 | Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
