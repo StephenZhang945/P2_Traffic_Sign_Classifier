@@ -17,8 +17,9 @@ The goals / steps of this project are the following:
 * Summarize the results with a written report
 
 
-[//]: # (https://github.com/StephenZhang945/P2_Traffic_Sign_Classifier/blob/master/New_Image/0.png)
-
+[//]: # ()
+[image]:https://github.com/StephenZhang945/P2_Traffic_Sign_Classifier/blob/master/New_Image/0.png
+just as [image]
 [image1]: ./examples/visualization.jpg "Visualization"
 [image2]: ./examples/grayscale.jpg "Grayscaling"
 [image3]: ./examples/random_noise.jpg "Random Noise"
@@ -55,7 +56,7 @@ signs data set:
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data distributed.
 
-![alt text][image1]()
+![alt text][https://github.com/StephenZhang945/P2_Traffic_Sign_Classifier/blob/master/Unknown.png]
 
 ### Design and Test a Model Architecture
 
