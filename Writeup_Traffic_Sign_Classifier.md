@@ -100,7 +100,7 @@ My final model consisted of the following layers:
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-To train the model, I used an softmax, logistics and cross-entropy function, and then calculate the training loss, optimizer is Adamoptimizer, because it's fast optimizer than SGD, 
+To train the model, I used an softmax, logistics and cross-entropy function, and then calculate the training loss, optimizer is Adamoptimizer, because it's fast optimizer than SGD, hyperparameters as below:
 EPOCHS = 10
 BATCH_SIZE = 126
 learning_rate = 0.005
@@ -113,17 +113,13 @@ My final model results were:
 * test set accuracy of 0.985
 
 If an iterative approach was chosen:
-* What was the first architecture that was tried and why was it chosen?
-* What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-* Which parameters were tuned? How were they adjusted and why?
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
-
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
- 
+* What was the first architecture that was tried and why was it chosen? ————lenet architecture has been chosen, since this is effective image classifier architecture.
+* What were some problems with the initial architecture?————in previous time, training accuracy and validation accuracy is not exceed 90%.
+* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.————in the first try, i didn't add augmented image, low accuracy on both of training set and validation set, then i generated augmented image by translate, rotate and resize.
+* Which parameters were tuned? How were they adjusted and why?———— 
+  1:Frist try epochs set as 56, but i found that both training and validation accuracy are not increase after 7 or 8 epochs, so i turn it to 10 epochs. 
+  2:BATCH_SIZE has been tuned from 156 to 126, accuracy is not keep pace with it, so keep this value.
+  3:Inital learning-rate is 0.05, highest validation accuracy is 92%, tweek it to 0.005, hit 98%.
 
 ### Test a Model on New Images
 
@@ -147,7 +143,7 @@ limit(30km/h)
 
 ![right-of-way at the next intersection](https://github.com/StephenZhang945/P2_Traffic_Sign_Classifier/blob/master/New_Image/4.png)right-of-way at the next intersection
 
-The first image might be difficult to classify because ...
+The second image might be difficult to classify because after convert from RGB to grayscale， "go left" signal in this image maybe ignored or confused in different angle of view or shadow.
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
@@ -155,31 +151,30 @@ Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| speed limit(30km/h)     		| speed limit(30km/h   		 	| 
+| go straight or left     		| go straight or left						|
+| ahead only					| ahead only						|
+| no vehicles  		| no vehicles						|
+| right-of-way at the next intersection			| right-of-way at the next intersection 		|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the test set of 98%.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+The code for making predictions on my final model is located in the 15th cell of the Ipython notebook.
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+For the second image, the model is relatively sure that this is a "go straight or left" sign (probability of .59), and the image does contain a correct sign. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+| .59    | Go straight or left  	| 
+| .38    | Priority road					   	|
+| .01		 	| Traffic signals		   		|
+| .01  		| General caution		   		|
+| 0		  	 | Yield.              		|
 
-
-For the second image ... 
+For the rest of images, the model is give the 100% prediction.
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
