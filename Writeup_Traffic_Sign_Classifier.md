@@ -17,18 +17,6 @@ The goals / steps of this project are the following:
 * Summarize the results with a written report
 
 
-[//]: # ()
-[image]:https://github.com/StephenZhang945/P2_Traffic_Sign_Classifier/blob/master/New_Image/0.png
-just as [image]
-[image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
-
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
@@ -56,7 +44,7 @@ signs data set:
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data distributed.
 
-![alt text][https://github.com/StephenZhang945/P2_Traffic_Sign_Classifier/blob/master/Unknown.png]
+![bar chart](https://github.com/StephenZhang945/P2_Traffic_Sign_Classifier/blob/master/Unknown.png?raw=true)
 
 ### Design and Test a Model Architecture
 
@@ -66,7 +54,7 @@ As a first step, I decided to convert the images to grayscale because color is n
 
 Here is an example of a traffic sign image before and after grayscaling.
 
-![alt text][image2]
+![alt text](https://github.com/StephenZhang945/P2_Traffic_Sign_Classifier/blob/master/original%26grayscaled.png)
 
 As a last step, I normalized the image data because normalize process change the image value (0~255) to (-1~1) is more easy to apply logistics regression.
 
@@ -76,7 +64,7 @@ To add more data to the the data set, I used the following techniques because im
 
 Here is an example of an original image and an augmented image:
 
-![alt text][image3]
+![alt text](https://github.com/StephenZhang945/P2_Traffic_Sign_Classifier/blob/master/augmented_image.png)
 
 The difference between the original data set and the augmented data set is that augmented data set is switch from original data by translation, rotation and resize.
 
