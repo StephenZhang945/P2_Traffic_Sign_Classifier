@@ -44,7 +44,7 @@ signs data set:
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data distributed.
 
-![bar chart](https://github.com/StephenZhang945/P2_Traffic_Sign_Classifier/blob/master/Unknown.png?raw=true)
+![bar chart](https://github.com/StephenZhang945/P2_Traffic_Sign_Classifier/blob/master/Unknown.png)
 
 ### Design and Test a Model Architecture
 
